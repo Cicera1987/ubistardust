@@ -1,10 +1,15 @@
+import {ThemeProvider} from "@stardust-ds/react"
+import { customTheme } from "./components/atoms/Theme/theme";
+import Routers from "./routers/Router";
+
+
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Word</h1>
-    </div>
+    <ThemeProvider theme={customTheme.neutrals}>
+      <Routers/>
+    </ThemeProvider>
   );
 }
 
