@@ -3,8 +3,9 @@ import {
   FaTh,
   FaUserAlt,
   FaBars,
-  FaFileAlt,
-  FaIdBadge
+  FaIdCardAlt,
+  FaRegChartBar,
+  FaShoppingBag
 
 } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
@@ -21,19 +22,25 @@ const Sidebar = ({ children }) => {
     },
     {
       path: "/home",
-      name: "Home",
+      name: "Profissionais",
       icon: <FaUserAlt />,
     },
     {
-      path: "/listHeaderProfessional",
-      name: "Profissional",
-      icon: <FaFileAlt />,
+      path: "/listClients",
+      name: "Clientes",
+      icon: <FaIdCardAlt />,
     },
     {
-      path: "/listProfessional",
-      name: "Listagem",
-      icon: <FaIdBadge />,
+      path: "/ListDespesas",
+      name: "Despesas",
+      icon: <FaRegChartBar />,
     },
+    {
+      path: "/ListServices",
+      name: "Serviços",
+      icon: <FaShoppingBag />,
+    },
+
 
 
   ]
@@ -41,7 +48,7 @@ const Sidebar = ({ children }) => {
     <div className="container">
       <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
         <div className="top_section">
-          <h2 style={{ display: isOpen ? "block" : "none" }} className="logo">Logo</h2>
+          <h2 style={{ display: isOpen ? "block" : "none" }} className="logo">Controle</h2>
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
             <FaBars onClick={toggle}/>
           </div>
