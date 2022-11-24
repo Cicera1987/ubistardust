@@ -6,33 +6,33 @@ function ListClients() {
   const menuClients: Clients[] = [
     {
       id: 1,
-      name: "Fernando Ribeiro",
+      name: "CasaGrande",
       CPF: "025.365.604-68",
-      email: "fernando@hotmail.com"
+      email: "casa@hotmail.com"
     },
     {
       id: 1,
-      name: "Felipe Ribeiro",
+      name: "MenusPelo",
       CPF: "025.365.604-33",
-      email: "felipe@hotmail.com"
+      email: "depil@hotmail.com"
     },
     {
       id: 1,
-      name: "Alessandra Lucinda",
+      name: "ManicureLigth",
       CPF: "325.365.604-78",
-      email: "lucinda@hotmail.com"
+      email: "unhas@hotmail.com"
     },
     {
       id: 1,
-      name: "Carlos Jose Ribeiro",
+      name: "Casas amor",
       CPF: "555.365.604-33",
-      email: "carlo@hotmail.com"
+      email: "love@hotmail.com"
     },
     {
       id: 1,
-      name: "Silvano da Silva",
+      name: "Farias café",
       CPF: "359.365.604-51",
-      email: "silvanoo@hotmail.com"
+      email: "cafe@hotmail.com"
     },
   ];
 
