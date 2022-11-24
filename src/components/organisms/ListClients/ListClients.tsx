@@ -6,7 +6,7 @@ function ListClients() {
   const menuClients: Clients[] = [
     {
       id: 1,
-      name: "CasaGrande",
+      name: "Costuras",
       CPF: "025.365.604-68",
       email: "casa@hotmail.com"
     },
@@ -18,13 +18,13 @@ function ListClients() {
     },
     {
       id: 1,
-      name: "ManicureLigth",
+      name: "Manicure",
       CPF: "325.365.604-78",
       email: "unhas@hotmail.com"
     },
     {
       id: 1,
-      name: "Casas amor",
+      name: "Casa amor",
       CPF: "555.365.604-33",
       email: "love@hotmail.com"
     },
