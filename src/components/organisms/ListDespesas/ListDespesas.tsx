@@ -11,18 +11,28 @@ const ListDespesas = () => {
   const menuDespesas: DataDespesas[] = [
     {
       id: 1,
-      name: "Consultoria Financeira",
-      price: 1200
+      name: "Aluguel Mensal",
+      price: 1200,
     },
     {
       id: 1,
-      name: "Consultoria Fiscal Cont",
-      price: 1390
+      name: "Energia eletrica",
+      price: 850,
     },
     {
       id: 1,
-      name: "Consultoria Jurídica Dir",
-      price: 2000
+      name: "Agua e esgoto",
+      price: 500,
+    },
+    {
+      id: 1,
+      name: "Contabilidade",
+      price: 900,
+    },
+    {
+      id: 1,
+      name: "Impostos Mes ",
+      price: 3000,
     },
   ];
 
@@ -34,17 +44,17 @@ const ListDespesas = () => {
           Despesas
         </Typography>
         <ContainerHeader>
-          <Typography type="h2" color="#ccc">
-            Tipo de Serviço prestado
+          <Typography type="h5" color="#ccc">
+            Tipo de Dispesa
           </Typography>
-          <Typography type="h2" color="#ccc">
-            Valor do serviço
+          <Typography type="h5" color="#ccc">
+            Valor
           </Typography>
         </ContainerHeader>
         {menuDespesas.map((item) => (
           <ContainerGlobal key={item.id}>
-            <div style={{ paddingRight: "10em" }}>{item.name}</div>
-            <div style={{ paddingRight: "6em" }}>R$ {item.price},00</div>
+            <div style={{ paddingRight: "5em" }}>{item.name}</div>
+            <div style={{ paddingRight: "3em" }}>R$ {item.price},00</div>
           </ContainerGlobal>
         ))}
       </ContainerDados>
