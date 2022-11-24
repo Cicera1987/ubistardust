@@ -24,7 +24,7 @@ export const ContainerHeader = styled.div`
   width: 100%;
   align-items: center;
   margin-top: 0.5em;
-  gap: 6em;
-  padding-left: 0.7em;
+  gap: 6.5em;
+  padding-left:1em;
 `;
 
