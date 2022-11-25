@@ -1,9 +1,10 @@
-import { Typography } from '@stardust-ds/react';
+import { Typography, Button, useTheme } from '@stardust-ds/react';
 import React from 'react'
 import { ContainerDados, ContainerGlobal, ContainerHeader } from '../../pages/Home/style';
 import { DataServices } from '../../style/type/type';
 
 const ListServices = () => {
+    const { brand } = useTheme();
   const menuServices: DataServices[] = [
     {
       id: 1,
@@ -29,6 +30,7 @@ const ListServices = () => {
         <Typography type="h2" color="#ccc">
           Serviços
         </Typography>
+
         <ContainerHeader>
           <Typography type="h5" color="#ccc">
             Tipo de Serviço prestado
@@ -43,9 +45,12 @@ const ListServices = () => {
             <div style={{ paddingRight: "6em" }}>R$ {item.price},00</div>
           </ContainerGlobal>
         ))}
+        <div style={{ marginTop: "30px", paddingLeft: "22em" }}>
+          <Button bgColor={brand.color.primary.medium}>Cadastrar Serviço</Button>
+        </div>
       </ContainerDados>
     </>
-  )
+  );
 };
 
 export default ListServices

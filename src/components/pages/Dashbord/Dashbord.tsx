@@ -1,12 +1,15 @@
 import { Typography } from '@stardust-ds/react'
+import { ContainerDados } from '../Home/style'
 
 
 const Dashbord = () => {
   return (
-        <Typography type="h2" color="#ccc">
-          Dashbord
-        </Typography>
-  )
+    <ContainerDados>
+      <Typography type="h2" color="#ccc">
+        Painel de Controle
+      </Typography>
+    </ContainerDados>
+  );
 }
 
 export default Dashbord

@@ -1,4 +1,4 @@
-import { Typography } from '@stardust-ds/react'
+import { Button, Typography, useTheme } from "@stardust-ds/react";
 import {
   ContainerDados,
   ContainerHeader,
@@ -8,6 +8,7 @@ import { DataDespesas } from '../../style/type/type';
 
 
 const ListDespesas = () => {
+      const { brand } = useTheme();
   const menuDespesas: DataDespesas[] = [
     {
       id: 1,
@@ -57,6 +58,11 @@ const ListDespesas = () => {
             <div style={{ paddingRight: "3em" }}>R$ {item.price},00</div>
           </ContainerGlobal>
         ))}
+        <div style={{ marginTop: "30px", paddingLeft: "180px" }}>
+          <Button bgColor={brand.color.primary.medium}>
+            Cadastrar Despesa
+          </Button>
+        </div>
       </ContainerDados>
     </>
   );
