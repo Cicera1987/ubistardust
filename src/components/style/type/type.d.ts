@@ -6,9 +6,9 @@ export interface DataProfessional {
     email: string
 }
 
-export interface Clients {
-    id: number;
-    name: string;
+export interface IClients {
+    value: string;
+    label: string;
     CPF: string;
     email: string
 }
@@ -20,7 +20,8 @@ export interface DataDespesas {
 }
 
 export interface DataServices {
-    id: number;
-    name: string;
+    label: string;
     price: number;
+    value: string
+
 }

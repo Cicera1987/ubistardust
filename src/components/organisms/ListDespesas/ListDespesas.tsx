@@ -1,4 +1,6 @@
 import { Button, Typography, useTheme } from "@stardust-ds/react";
+import { useEffect, useState } from "react";
+import {useNavigate } from "react-router-dom";
 import {
   ContainerDados,
   ContainerHeader,
@@ -8,7 +10,17 @@ import { DataDespesas } from '../../style/type/type';
 
 
 const ListDespesas = () => {
-      const { brand } = useTheme();
+  const [toggle, setToggle]=useState<Boolean>(false)
+  const { brand } = useTheme();
+const navigate = useNavigate()
+
+function addDespesa(){
+  setToggle(!toggle)
+  navigate("/adddespesas");  
+}
+
+
+
   const menuDespesas: DataDespesas[] = [
     {
       id: 1,
@@ -59,7 +71,7 @@ const ListDespesas = () => {
           </ContainerGlobal>
         ))}
         <div style={{ marginTop: "30px", paddingLeft: "180px" }}>
-          <Button bgColor={brand.color.primary.medium}>
+          <Button onClick={addDespesa} bgColor={brand.color.primary.medium}>
             Cadastrar Despesa
           </Button>
         </div>

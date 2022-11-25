@@ -1,28 +1,37 @@
 import { Typography, Button, useTheme } from '@stardust-ds/react';
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { ContainerDados, ContainerGlobal, ContainerHeader } from '../../pages/Home/style';
 import { DataServices } from '../../style/type/type';
 
-const ListServices = () => {
-    const { brand } = useTheme();
-  const menuServices: DataServices[] = [
+  export const menuServices: DataServices[] = [
     {
-      id: 1,
-      name: "Consultoria Financeira",
-      price: 1200
+      value: "1",
+      label: "Consultoria Financeira",
+      price: 1200,
     },
     {
-      id: 1,
-      name: "Consultoria Fiscal Cont",
-      price: 1390
+      value: "2",
+      label: "Consultoria Fiscal Cont",
+      price: 1390,
     },
     {
-      id: 1,
-      name: "Consultoria Jurídica Dir",
-      price: 2000
+      value: "3",
+      label: "Consultoria Jurídica Dir",
+      price: 2000,
     },
   ];
 
+const ListServices = () => {
+const { brand } = useTheme();
+const[toggle, setTogle] = useState<Boolean>(false)
+const navigate = useNavigate()
+
+
+function addServices(){
+  setTogle(!toggle)
+  navigate("/addservices")
+}
 
   return (
     <>
@@ -40,13 +49,15 @@ const ListServices = () => {
           </Typography>
         </ContainerHeader>
         {menuServices.map((item) => (
-          <ContainerGlobal key={item.id}>
-            <div style={{ paddingRight: "10em" }}>{item.name}</div>
+          <ContainerGlobal key={item.value}>
+            <div style={{ paddingRight: "10em" }}>{item.label}</div>
             <div style={{ paddingRight: "6em" }}>R$ {item.price},00</div>
           </ContainerGlobal>
         ))}
         <div style={{ marginTop: "30px", paddingLeft: "22em" }}>
-          <Button bgColor={brand.color.primary.medium}>Cadastrar Serviço</Button>
+          <Button onClick={addServices} bgColor={brand.color.primary.medium}>
+            Cadastrar Serviço
+          </Button>
         </div>
       </ContainerDados>
     </>
